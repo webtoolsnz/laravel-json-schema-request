@@ -1,0 +1,47 @@
+{
+    "name": "webtools/laravel-json-schema-request",
+    "version": "1.0.0",
+    "description": "Like FormRequests, but for validating against a json-schema",
+    "keywords": [
+        "webtools",
+        "json-schema",
+        "laravel",
+        "FormRequest",
+        "validation"
+    ],
+    "homepage": "https://github.com/webtoolsnz/laravel-json-schema-request",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Byron Adams",
+            "email": "byron@webtools.co.nz",
+            "homepage": "https://webtools.nz",
+            "role": "Developer"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^5.3",
+        "phpunit/phpunit": "^9.2"
+    },
+    "require": {
+        "justinrainbow/json-schema": "^5.2",
+        "php": "^7.4",
+        "illuminate/support": "^7.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Webtools\\JsonSchemaRequest\\": "src/",
+            "Webtools\\JsonSchemaRequest\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webtools\\JsonSchemaRequest\\ServiceProvider"
+            ]
+        }
+    }
+}
