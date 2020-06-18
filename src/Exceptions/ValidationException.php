@@ -3,7 +3,7 @@
 namespace Webtools\JsonSchemaRequest\Exceptions;
 
 use Illuminate\Http\Response;
-use Webtools\JsonSchemaRequest\JsonSchemaValidator;
+use Webtools\JsonSchemaRequest\Validation\JsonSchemaValidator;
 
 class ValidationException extends \Exception
 {

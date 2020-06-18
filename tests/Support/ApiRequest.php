@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Webtools\JsonSchemaRequest\Tests\Support;
-
 
 use Webtools\JsonSchemaRequest\JsonSchemaRequest;
 
