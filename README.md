@@ -10,7 +10,7 @@ Installation
 --------------
 
 ```bash
- composer require webtools/laravel-json-schema-request
+ composer require webtoolsnz/laravel-json-schema-request
 ```
 
 Usage
