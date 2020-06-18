@@ -2,12 +2,10 @@
 
 namespace Webtools\JsonSchemaRequest\Tests;
 
-use Illuminate\Http\Exceptions\HttpResponseException;
-use Illuminate\Validation\ValidationException;
+use Webtools\JsonSchemaRequest\Exceptions\ValidationException;
 use Webtools\JsonSchemaRequest\JsonSchemaValidator;
 use JsonSchema\Validator;
 use PHPUnit\Framework\TestCase;
-
 
 class JsonSchemaValidatorTest extends TestCase
 {

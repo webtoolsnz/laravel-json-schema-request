@@ -9,6 +9,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Validation\ValidatesWhenResolvedTrait;
+use Webtools\JsonSchemaRequest\Exceptions\ValidationException;
 
 class JsonSchemaRequest extends Request implements ValidatesWhenResolved
 {
@@ -40,10 +41,7 @@ class JsonSchemaRequest extends Request implements ValidatesWhenResolved
 
     public function failedValidation(JsonSchemaValidator $validator)
     {
-        throw new HttpResponseException(response()->json(
-            ['errors' => $validator->errors()],
-            Response::HTTP_UNPROCESSABLE_ENTITY
-        ));
+        throw new ValidationException($validator);
     }
 
     public function validated()

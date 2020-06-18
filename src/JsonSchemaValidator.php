@@ -6,7 +6,7 @@ use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 use Illuminate\Support\MessageBag;
 use JsonSchema\Validator as SchemaValidator;
 use JsonSchema\Constraints\Constraint;
-use Illuminate\Validation\ValidationException;
+use Webtools\JsonSchemaRequest\Exceptions\ValidationException;
 
 class JsonSchemaValidator implements ValidatorContract
 {
