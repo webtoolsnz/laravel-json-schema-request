@@ -1,6 +1,5 @@
 {
     "name": "webtools/laravel-json-schema-request",
-    "version": "1.0.0",
     "description": "Like FormRequests, but for validating against a json-schema",
     "keywords": [
         "webtools",

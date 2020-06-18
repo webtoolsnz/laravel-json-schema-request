@@ -1,0 +1,36 @@
+name: continuous-integration
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  codeception:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup PHP
+        uses: shivammathur/setup-php@master
+        with:
+          php-version: '7.4'
+          extension-csv: mbstring,bcmath,curl,gettext,exif,intl
+          ini-values-csv: pcov.directory=./src/
+          coverage: pcov
+      - name: Composer Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer-cache
+          key: ${{ runner.OS }}-composer-cache
+      - name: Composer
+        run: |
+          composer config cache-files-dir ~/.composer-cache
+          composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
+      - name: PHPUnit
+        run: ./vendor/bin/phpunit --coverage-clover=coverage.clover
+      - name: Download ocular reporter
+        run: curl -L https://scrutinizer-ci.com/ocular.phar > ./ocular.phar
+      - name: Upload Coverage report
+        run: php ocular.phar code-coverage:upload --access-token="${SCRUTINIZER_ACCESS_TOKEN}" --format=php-clover ./coverage.clover
+        env:
+          SCRUTINIZER_ACCESS_TOKEN: ${{ secrets.SCRUTINIZER_ACCESS_TOKEN }}
