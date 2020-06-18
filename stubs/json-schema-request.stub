@@ -1,0 +1,18 @@
+<?php
+
+namespace DummyNamespace;
+
+use Webtools\JsonSchemaRequest\JsonSchemaRequest;
+
+class DummyClass extends JsonSchemaRequest
+{
+    public function schema(): array
+    {
+        return [
+            'type' => 'object',
+            'properties' => [
+
+            ]
+        ];
+    }
+}

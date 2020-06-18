@@ -3,7 +3,7 @@
 namespace Webtools\JsonSchemaRequest\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Webtools\JsonSchemaRequest\ServiceProvider;
+use Webtools\JsonSchemaRequest\JsonSchemaRequestServiceProvider;
 use Webtools\JsonSchemaRequest\Tests\Support\ApiRequest;
 use Illuminate\Routing\Router;
 
@@ -11,7 +11,7 @@ class JsonSchemaRequestTest extends TestCase
 {
     protected function getPackageProviders($app)
     {
-        return [ServiceProvider::class];
+        return [JsonSchemaRequestServiceProvider::class];
     }
 
     /**

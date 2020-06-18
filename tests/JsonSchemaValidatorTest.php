@@ -3,7 +3,7 @@
 namespace Webtools\JsonSchemaRequest\Tests;
 
 use Webtools\JsonSchemaRequest\Exceptions\ValidationException;
-use Webtools\JsonSchemaRequest\JsonSchemaValidator;
+use Webtools\JsonSchemaRequest\Validation\JsonSchemaValidator;
 use JsonSchema\Validator;
 use PHPUnit\Framework\TestCase;
 

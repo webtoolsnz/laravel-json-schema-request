@@ -5,11 +5,10 @@ namespace Webtools\JsonSchemaRequest;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 use Illuminate\Contracts\Validation\Validator as ValidatorContract;
-use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Validation\ValidatesWhenResolvedTrait;
 use Webtools\JsonSchemaRequest\Exceptions\ValidationException;
+use Webtools\JsonSchemaRequest\Validation\JsonSchemaValidator;
 
 class JsonSchemaRequest extends Request implements ValidatesWhenResolved
 {

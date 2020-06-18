@@ -1,6 +1,6 @@
 <?php
 
-namespace Webtools\JsonSchemaRequest;
+namespace Webtools\JsonSchemaRequest\Validation;
 
 use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 use Illuminate\Support\MessageBag;

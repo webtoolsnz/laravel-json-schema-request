@@ -3,9 +3,16 @@
 namespace Webtools\JsonSchemaRequest;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Webtools\JsonSchemaRequest\Console\MakeJsonSchemaRequestCommand;
 
-class ServiceProvider extends BaseServiceProvider
+class JsonSchemaRequestServiceProvider extends BaseServiceProvider
 {
+    public function register()
+    {
+        $this->app->bind('command.make:json-request', MakeJsonSchemaRequestCommand::class);
+        $this->commands(['command.make:json-request']);
+    }
+
     /**
      * Bootstrap the application services.
      *

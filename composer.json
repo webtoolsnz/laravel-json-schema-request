@@ -39,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Webtools\\JsonSchemaRequest\\ServiceProvider"
+                "Webtools\\JsonSchemaRequest\\JsonSchemaRequestServiceProvider"
             ]
         }
     }
